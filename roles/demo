@@ -1,3 +1,0 @@
-- name: "demo for roles"
-  debug:
-    msg: "demo from roles"
