@@ -1,0 +1,4 @@
+--- 
+- name: "print mesaage"
+  debug:
+    msg: 'hello sworld'
