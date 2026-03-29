@@ -1,0 +1,21 @@
+- name: "copying mongodb repo file"
+  copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo
+  
+- name: "Installing Mongodb"
+  yum: 
+  name: mongodb-org 
+  state: present
+
+- name: "Changing ip address"
+  replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+  
+- name: "Starting Mongodb service"
+  service: 
+    name: mongod
+    state: started
+    enabled: yes
