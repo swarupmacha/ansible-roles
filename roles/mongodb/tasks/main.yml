@@ -5,8 +5,8 @@
   
 - name: "Installing Mongodb"
   yum: 
-  name: mongodb-org 
-  state: present
+    name: mongodb-org 
+    state: present
 
 - name: "Changing ip address"
   replace:
