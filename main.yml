@@ -1,0 +1,6 @@
+---
+- name: "role demo"
+  hosts: local
+  connection: local
+  roles:
+  - demo
